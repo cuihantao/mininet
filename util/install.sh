@@ -480,7 +480,7 @@ function ryu {
     # install ryu
     sudo pip install -r tools/pip-requires -r tools/optional-requires \
         -r tools/test-requires
-    sudo python setup.py install
+    sudo $PYTHON setup.py install
 
     # Add symbolic link to /usr/bin
     sudo ln -s ./bin/ryu-manager /usr/local/bin/ryu-manager
