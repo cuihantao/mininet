@@ -37,8 +37,8 @@ test -e /etc/debian_version && DIST="Debian"
 grep Ubuntu /etc/lsb-release &> /dev/null && DIST="Ubuntu"
 if [ "$DIST" = "Ubuntu" ] || [ "$DIST" = "Debian" ]; then
     # Truly non-interactive apt-get installation
-    install='sudo DEBIAN_FRONTEND=noninteractive apt-get -y -q install'
-    remove='sudo DEBIAN_FRONTEND=noninteractive apt-get -y -q remove'
+    install='sudo apt-get -y -q install'
+    remove='sudo apt-get -y -q remove'
     pkginst='sudo dpkg -i'
     update='sudo apt-get'
     # Prereqs for this script
